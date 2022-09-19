@@ -9,10 +9,10 @@ https://ext.dcloud.net.cn/plugin?id=9532
 1. 宝塔面板先添加站点
 2. 创建数据库，导入给的数据库  
 https://fudan.lanzoub.com/iF2Zc0bzea4f
-密码:hma3
+ 密码:hma3
 3. 上传源码  
 https://fudan.lanzoub.com/i5xCb0bzeb3a
-密码:c7bt
+ 密码:c7bt
 4. 在/public/config/database.php下配置数据库
 5. 设置伪静态为thinkphp,运行目录为/public
 6. 在/public/config/gate_worker.php下配置数据库,查看接口，在防火墙放行这个端口
