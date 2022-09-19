@@ -3,9 +3,6 @@
 前端：uniapp+vue2
 后端：php
 
-**体验地址:**
-www.pgyer.com/tiange
-
 **前端源码:**
 https://ext.dcloud.net.cn/plugin?id=9532
 
