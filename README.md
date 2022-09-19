@@ -4,10 +4,10 @@ www.pgyer.com/tiange
 
 **安装教程:**
 1. 宝塔面板先添加站点
-2. 创建数据库，导入给的数据库 
+2. 创建数据库，导入给的数据库
 https://fudan.lanzoub.com/iF2Zc0bzea4f
 密码:hma3
-3. 上传源码  
+3. 上传源码
 https://fudan.lanzoub.com/i5xCb0bzeb3a
 密码:c7bt
 4. 在/public/config/database.php下配置数据库
