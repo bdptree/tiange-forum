@@ -1,4 +1,8 @@
 # 天鸽社区论坛类开发模板搭建指南
+**项目结构:**
+前端：uniapp+vue2
+后端：php
+
 **体验地址:**
 www.pgyer.com/tiange
 
