@@ -27,5 +27,5 @@ https://fudan.lanzoub.com/ihh2z0c17ykf
 ![2022-09-20_18-40-09.png](https://img1.imgtp.com/2022/09/20/U0Kb2aXm.png)
 12. 这样你就可以搭建你的论坛了！
 
-**License:**
+**Lisence:**  
 MIT开源协议
