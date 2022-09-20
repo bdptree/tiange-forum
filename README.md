@@ -1,6 +1,6 @@
 # 天鸽社区论坛类开发模板搭建指南
 **项目预览:**
-https://img-cdn-aliyun.dcloud.net.cn/stream/plugin_screens/131fcc10-37cf-11ed-8be2-0593d4a5e7c4_1.png?image_process=quality,q_70/format,webp&v=1663560104
+![2022-09-20_18-31-15.png](https://img-cdn-aliyun.dcloud.net.cn/stream/plugin_screens/131fcc10-37cf-11ed-8be2-0593d4a5e7c4_1.png)
 
 **项目结构:**
 前端：uniapp+vue2
