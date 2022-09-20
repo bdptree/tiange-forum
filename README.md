@@ -37,3 +37,7 @@ https://fudan.lanzoub.com/ihh2z0c17ykf
 
 # **开源协议:**   
 MIT License
+
+# **赞助我:** 
+https://ext.dcloud.net.cn/plugin?id=9532  
+![image](https://user-images.githubusercontent.com/91184963/191244575-7f696072-5a9c-48ee-97f2-65ec4fda15de.png)
