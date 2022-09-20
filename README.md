@@ -17,7 +17,8 @@ https://fudan.lanzoub.com/i5xCb0bzeb3a
 4. 在/public/config/database.php下配置数据库
 5. 设置伪静态为thinkphp,运行目录为/public
 6. 在/public/config/gate_worker.php下查看接口，在防火墙放行这个端口
-7. 在SSH窗口输入：php-v (这步检查，保证你的PHP版本在7.2+)
+7. 在SSH窗口输入：php-v (这步检查，建议使用的PHP版本不超过7.2)
 8. 在SSH窗口输入：cd /www/wwwroot/你的网站名
 9. 在SSH窗口输入：php think worker:gateway (这步是开启websocket)
 10. 在/www/wwwroot/你的网址/application/common/controller/FileController的网址改成你自己的
+11. 测试 https://你的网址/api/v1/post/ 如显示 {"msg":"获取成功","data":{"detail":null}} 即为后台配置成功
