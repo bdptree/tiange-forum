@@ -16,7 +16,7 @@ https://fudan.lanzoub.com/i5xCb0bzeb3a
  密码:c7bt
 4. 在/public/config/database.php下配置数据库
 5. 设置伪静态为thinkphp,运行目录为/public
-6. 在/public/config/gate_worker.php下配置数据库,查看接口，在防火墙放行这个端口
+6. 在/public/config/gate_worker.php下查看接口，在防火墙放行这个端口
 7. 在SSH窗口输入：php-v (这步检查，保证你的PHP版本在7.2+)
 8. 在SSH窗口输入：cd /www/wwwroot/你的网站名
 9. 在SSH窗口输入：php think worker:gateway (这步是开启websocket)
