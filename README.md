@@ -20,7 +20,7 @@ https://ext.dcloud.net.cn/plugin?id=9532
 # **后端教程:**
 1. 宝塔面板先添加站点
 2. 创建数据库，导入给的数据库  
-https://fudan.lanzoub.com/iF2Zc0bzea4f
+https://fudan.lanzoub.com/iorbM0c16zqb
 3. 上传后台源码  
 https://fudan.lanzoub.com/ihh2z0c17ykf
 4. 在/public/config/database.php下配置数据库
