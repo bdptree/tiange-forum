@@ -6,6 +6,14 @@
 前端：uniapp+vue2  
 后端：php
 
+**更新记录 :** 
+2.3（2022-09-19）
+1、增加了二级回复功能，修复了评论区头像显示问题
+2、优化了界面显示，更加符合主流社交媒体平台的使用习惯
+
+**平台兼容性 :**  
+![image](https://user-images.githubusercontent.com/91184963/191243024-ef0ad224-e8a4-43f9-9feb-b02779041340.png)
+
 **项目预览及前端源码:**
 https://ext.dcloud.net.cn/plugin?id=9532
 
