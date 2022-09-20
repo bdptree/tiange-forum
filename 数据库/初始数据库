@@ -1,0 +1,503 @@
+-- MySQL dump 10.13  Distrib 5.6.50, for Linux (x86_64)
+--
+-- Host: localhost    Database: cloud
+-- ------------------------------------------------------
+-- Server version	5.6.50-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `adsense`
+--
+
+DROP TABLE IF EXISTS `adsense`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `adsense` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `src` varchar(255) NOT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `type` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0 动态轮播图 1个人中心',
+  `create_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `adsense`
+--
+
+LOCK TABLES `adsense` WRITE;
+/*!40000 ALTER TABLE `adsense` DISABLE KEYS */;
+INSERT INTO `adsense` VALUES (1,'https://img1.imgtp.com/2022/09/18/hnw5Cqqm.jpg',NULL,0,NULL);
+/*!40000 ALTER TABLE `adsense` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `blacklist`
+--
+
+DROP TABLE IF EXISTS `blacklist`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `blacklist` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `black_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '拉黑id',
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '用户id',
+  `create_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `blacklist`
+--
+
+LOCK TABLES `blacklist` WRITE;
+/*!40000 ALTER TABLE `blacklist` DISABLE KEYS */;
+/*!40000 ALTER TABLE `blacklist` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `comment`
+--
+
+DROP TABLE IF EXISTS `comment`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(20) unsigned NOT NULL DEFAULT '0' COMMENT '发布人',
+  `fid` int(20) unsigned NOT NULL DEFAULT '0' COMMENT '回复id',
+  `fnum` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '被回复数',
+  `data` varchar(225) NOT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `post_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=678 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `comment`
+--
+
+LOCK TABLES `comment` WRITE;
+/*!40000 ALTER TABLE `comment` DISABLE KEYS */;
+INSERT INTO `comment` VALUES (636,400,0,0,'有人',1663469160,355),(637,400,0,0,'测试评论',1663474276,358),(638,400,0,0,'测试',1663474345,358),(639,405,0,0,'6',1663475055,358),(640,405,0,0,'评论区的头像挺奇怪啊',1663475068,358),(641,402,0,0,'确实，评论区头像形状不对',1663475354,358),(642,402,0,0,'有人',1663475382,355),(643,400,0,0,'这个下个版本调整',1663475434,358),(644,402,0,0,'字数不全啊',1663475578,359),(645,400,0,0,'好的，我去看一下是什么问题',1663475727,359),(646,407,0,0,'测试',1663477729,358),(647,400,0,0,'修复了评论头像了已经',1663494911,361),(648,400,0,0,'哈哈',1663494938,343),(649,400,0,0,'好耶✌',1663498540,361),(652,400,650,0,'测试',1663501298,362),(653,400,0,1,'测试',1663501306,361),(654,400,653,1,'测试',1663501312,361),(655,400,0,0,'可以的',1663501331,361),(656,400,654,0,'可以的',1663501339,361),(657,400,0,0,'测试评论',1663501474,362),(658,407,0,0,'试试',1663502891,361),(660,403,0,0,'哈哈',1663506225,343),(661,403,0,0,'这名字真臭啊（恼',1663506252,342),(662,403,0,0,'沙发',1663506260,341),(663,403,0,1,'test',1663506310,362),(664,402,0,0,'回复回复',1663507686,361),(665,400,0,1,'怎么样',1663508312,362),(666,400,0,0,'怎么样',1663508322,362),(667,400,0,1,'怎么样',1663508334,362),(668,400,0,0,'怎么样',1663508344,362),(669,400,667,0,'怎么',1663508352,362),(670,400,663,0,'怎么样',1663508358,362),(671,400,665,0,'如何',1663508371,362),(672,400,0,0,'如何',1663508376,362),(673,404,0,1,'不能删除帖子',1663513292,362),(674,404,0,1,'字数限制，回车无效',1663513321,362),(675,400,673,0,'收到',1663513405,362),(676,400,674,0,'好的',1663513410,362),(677,400,0,0,'已经收到了你的反馈，后面版本会改进的',1663513894,363);
+/*!40000 ALTER TABLE `comment` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `feedback`
+--
+
+DROP TABLE IF EXISTS `feedback`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `feedback` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `to_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '接受id',
+  `from_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '发送id',
+  `data` varchar(255) DEFAULT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `feedback`
+--
+
+LOCK TABLES `feedback` WRITE;
+/*!40000 ALTER TABLE `feedback` DISABLE KEYS */;
+/*!40000 ALTER TABLE `feedback` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `follow`
+--
+
+DROP TABLE IF EXISTS `follow`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `follow` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `follow_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '关注id',
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '用户id',
+  `create_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=807 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `follow`
+--
+
+LOCK TABLES `follow` WRITE;
+/*!40000 ALTER TABLE `follow` DISABLE KEYS */;
+INSERT INTO `follow` VALUES (792,400,402,1663411871),(793,401,400,1663415946),(794,367,400,1663415983),(795,392,400,1663415986),(796,362,400,1663415987),(800,402,400,1663430381),(801,400,406,1663464283),(803,406,400,1663472311),(804,400,405,1663475114),(805,400,408,1663491051),(806,408,400,1663494879);
+/*!40000 ALTER TABLE `follow` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `image`
+--
+
+DROP TABLE IF EXISTS `image`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `image` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) NOT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1017 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `image`
+--
+
+LOCK TABLES `image` WRITE;
+/*!40000 ALTER TABLE `image` DISABLE KEYS */;
+INSERT INTO `image` VALUES (990,'https//cloud.ourcolu.com/uploads/20220918/c4f60e6f4cc23b726779d6a95389f514.jpg',1663470407,400),(991,'https://cloud.ourcolu.com/uploads/20220918/a6f16ea75585d3db5868f30c0d0456f7.jpg',1663470499,400),(992,'https://cloud.ourcolu.com/uploads/20220918/8074fa041ea0a3d6a39cec0412606ee9.png',1663471574,400),(993,'https://cloud.ourcolu.com/uploads/20220918/aaa722878857f03f20d4fe95633e64a4.jpeg',1663471778,400),(994,'https://cloud.ourcolu.com/uploads/20220918/8dddfac70aaa8f80a469afbaf62a456e.png',1663475009,405),(995,'https://cloud.ourcolu.com/uploads/20220918/f9145ce65c8ece0889bd5a946afb2704.png',1663475022,405),(996,'https://cloud.ourcolu.com/uploads/20220918/5df3687bef88ffd3f39fc60558d5b4c5.png',1663475034,405),(997,'https://cloud.ourcolu.com/uploads/20220918/f71c3b023b99b126517906fe056901cf.jpg',1663475458,402),(998,'https://cloud.ourcolu.com/uploads/20220918/3d0eee878839f4aefa869d1dff458ae1.jpg',1663475521,402),(999,'https://cloud.ourcolu.com/uploads/20220918/d92b735e211dd6057eb63b4d3f067553.jpg',1663475521,402),(1000,'https://cloud.ourcolu.com/uploads/20220918/40a54b884612e3efe9dba768f289bbff.jpg',1663475521,402),(1001,'https://cloud.ourcolu.com/uploads/20220918/1be2704d301dafb66dd8785f42d0ea34.jpg',1663475521,402),(1002,'https://cloud.ourcolu.com/uploads/20220918/994256415877abdbd7c89ee80702deae.jpg',1663475521,402),(1003,'https://cloud.ourcolu.com/uploads/20220918/f68b0c837dadf7345efd0e91bf0cb473.jpg',1663475521,402),(1004,'https://cloud.ourcolu.com/uploads/20220918/a4047b1595c9c41c4843efdb8b9265bc.jpg',1663475521,402),(1005,'https://cloud.ourcolu.com/uploads/20220918/9e124a7b6871dcdff8f886ed0079953b.jpg',1663475521,402),(1006,'https://cloud.ourcolu.com/uploads/20220918/ca16edc5c939d616767c91bc5b603451.jpg',1663475521,402),(1007,'https://cloud.ourcolu.com/uploads/20220918/3a41e43ef648ba04c8eac88ec4c1d857.jpg',1663477677,407),(1008,'https://cloud.ourcolu.com/uploads/20220918/a091f52bd76adaf76aca199ede9867af.jpg',1663479408,403),(1009,'https://cloud.ourcolu.com/uploads/20220918/f0f3a6351df134a24fa00cc414c363ee.gif',1663479488,403),(1010,'https://cloud.ourcolu.com/uploads/20220918/a64e28689e92aa100d490fba6bfe98fa.gif',1663479500,403),(1011,'https://cloud.ourcolu.com/uploads/20220918/9e1bb905d391e658b30f2ca3f3b85697.jpg',1663496724,400),(1012,'https://cloud.ourcolu.com/uploads/20220918/11ee8b297a8e1c38c804b18b1b5b7e63.jpg',1663496939,400),(1013,'https://cloud.ourcolu.com/uploads/20220918/7ad38e4d0abe53a0f5b4be3826457a2f.jpg',1663496939,400),(1014,'https://cloud.ourcolu.com/uploads/20220918/d46876a635ef63ed1779cb16fc1b19d1.jpg',1663512902,404),(1015,'https://cloud.ourcolu.com/uploads/20220918/29a841dfaa608912caf8a19f196f996a.png',1663512945,404),(1016,'https://cloud.ourcolu.com/uploads/20220919/e141972922f61ee79664a0558c607023.jpg',1663549166,400);
+/*!40000 ALTER TABLE `image` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `post`
+--
+
+DROP TABLE IF EXISTS `post`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `post` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(20) unsigned NOT NULL DEFAULT '0' COMMENT '发布人',
+  `title` varchar(80) NOT NULL,
+  `titlepic` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `sharenum` int(10) unsigned NOT NULL DEFAULT '0',
+  `path` varchar(255) NOT NULL,
+  `type` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0 图文 1分享',
+  `create_time` int(11) DEFAULT NULL,
+  `post_class_id` int(11) DEFAULT NULL,
+  `share_id` int(11) unsigned DEFAULT '0',
+  `isopen` tinyint(1) DEFAULT '1' COMMENT '1开放，0仅自己可见',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=365 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `post`
+--
+
+LOCK TABLES `post` WRITE;
+/*!40000 ALTER TABLE `post` DISABLE KEYS */;
+INSERT INTO `post` VALUES (341,400,'大家好，欢迎大家使用本APP','','大家好，欢迎大家使用本APP',0,'未知',0,1663410207,1,0,1),(342,401,'有人吗','','有人吗',0,'未知',0,1663410515,1,0,1),(343,405,'说实话有点意思','','说实话有点意思',0,'未知',0,1663421065,1,0,1),(355,406,'有人吗','','有人吗',0,'未知',0,1663464361,1,0,1),(358,400,'终于可以发图了','https://cloud.ourcolu.com/uploads/20220918/aaa722878857f03f20d4fe95633e64a4.jpeg','终于可以发图了',0,'北京市-市辖区-西城区',0,1663471781,1,0,1),(359,402,'超多功能，尽在微箱','https://cloud.ourcolu.com/uploads/20220918/3d0eee878839f4aefa869d1dff458ae1.jpg','超多功能，尽在微箱。微箱是一个具有一百多个功能的工具箱软件，并且没有广告，无需会员，使用方便。快来下载吧：https://weibox.rth.app/weixiang/',1,'未知',0,1663475535,1,0,1),(360,408,'大家好，我是APP测试专用号','','大家好，我是APP测试专用号',0,'未知',0,1663491043,1,0,1),(361,400,'密码采用php随机盐值单向加密算法，即使数据库泄露也没有人能','','密码采用php随机盐值单向加密算法，即使数据库泄露也没有人能知道密码。',0,'上海市-市辖区-杨浦区',0,1663491987,1,0,1),(362,400,'测试帖','','测试帖',0,'北京市-市辖区-西城区',0,1663496969,1,0,1),(363,404,'海纳云 公测版_2.1.5-沧渊海(243)发布更新\n\n\"九','https://cloud.ourcolu.com/uploads/20220918/29a841dfaa608912caf8a19f196f996a.png','海纳云 公测版_2.1.5-沧渊海(243)发布更新\n\n\"九流分逝，北朝沧渊。意为海也\"\n\n                ——北魏·郦道元《水经注·河水一》\n\n\n下载链接:https://wwp.lanzoup.com/i8ZMM0bwg0je\n\n 提取码 : THUS',0,'江西省-赣州市-宁都县',0,1663513162,1,0,1),(364,400,'早上好','https://cloud.ourcolu.com/uploads/20220919/e141972922f61ee79664a0558c607023.jpg','早上好',0,'上海市-市辖区-杨浦区',0,1663549169,1,0,1);
+/*!40000 ALTER TABLE `post` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `post_class`
+--
+
+DROP TABLE IF EXISTS `post_class`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `post_class` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `classname` varchar(5) NOT NULL,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '0 禁用 1启用',
+  `create_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `post_class`
+--
+
+LOCK TABLES `post_class` WRITE;
+/*!40000 ALTER TABLE `post_class` DISABLE KEYS */;
+INSERT INTO `post_class` VALUES (1,'广场',1,NULL),(2,'反馈',1,NULL);
+/*!40000 ALTER TABLE `post_class` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `post_image`
+--
+
+DROP TABLE IF EXISTS `post_image`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `post_image` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `post_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '帖子id',
+  `image_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '图片id',
+  `create_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=337 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `post_image`
+--
+
+LOCK TABLES `post_image` WRITE;
+/*!40000 ALTER TABLE `post_image` DISABLE KEYS */;
+INSERT INTO `post_image` VALUES (312,345,977,1663432178),(313,345,978,1663432178),(314,346,979,1663432840),(315,347,980,1663433005),(316,348,981,1663433144),(317,351,983,1663433503),(318,352,984,1663433958),(319,353,985,1663434106),(320,354,986,1663434471),(321,356,989,1663469745),(322,357,990,1663470419),(323,358,993,1663471781),(324,359,998,1663475535),(325,359,999,1663475535),(326,359,1000,1663475535),(327,359,1001,1663475535),(328,359,1002,1663475535),(329,359,1003,1663475535),(330,359,1004,1663475535),(331,359,1005,1663475535),(332,359,1006,1663475535),(333,362,1012,1663496969),(334,362,1013,1663496969),(335,363,1015,1663513162),(336,364,1016,1663549169);
+/*!40000 ALTER TABLE `post_image` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `support`
+--
+
+DROP TABLE IF EXISTS `support`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `support` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '发布人',
+  `post_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '帖子id',
+  `type` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0 顶 1踩',
+  `create_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=617 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `support`
+--
+
+LOCK TABLES `support` WRITE;
+/*!40000 ALTER TABLE `support` DISABLE KEYS */;
+INSERT INTO `support` VALUES (543,362,311,0,1579960605),(544,362,310,0,1579960623),(545,362,308,1,1579960636),(546,362,307,0,1579960641),(547,362,306,0,1579960659),(548,362,309,1,1580018574),(549,362,260,0,1580019443),(550,362,258,0,1580019446),(551,362,252,1,1580019454),(552,362,242,1,1580019609),(553,362,241,1,1580019744),(554,362,35,1,1580019786),(555,274,314,0,1580371958),(556,274,304,0,1580372749),(557,341,316,0,1580574109),(558,341,314,0,1580574176),(559,341,312,1,1580574321),(560,341,309,0,1580574416),(561,341,311,0,1580574660),(562,341,310,0,1580574696),(563,341,308,0,1580574754),(564,341,307,0,1580574836),(565,341,306,0,1580574860),(566,341,305,1,1580574863),(567,392,338,0,1580832554),(568,393,337,0,1580893124),(569,399,295,0,1580985446),(570,401,342,0,1663410520),(571,402,313,0,1663411888),(572,402,335,1,1663411930),(573,400,341,0,1663412436),(574,400,342,0,1663412494),(575,400,336,0,1663415978),(576,400,337,0,1663415982),(577,400,340,0,1663415988),(578,400,331,0,1663415990),(579,400,330,0,1663415991),(580,400,329,0,1663415992),(581,400,328,0,1663415993),(582,400,327,0,1663415994),(583,400,325,0,1663415996),(584,400,326,0,1663415997),(585,400,323,0,1663415998),(586,400,324,0,1663415999),(587,400,338,0,1663418325),(588,405,342,0,1663420995),(589,405,343,0,1663421104),(590,400,343,0,1663422639),(591,400,344,0,1663427610),(592,406,352,1,1663464273),(593,400,355,0,1663469710),(594,400,356,0,1663470141),(595,400,357,0,1663470653),(596,400,358,0,1663471823),(597,405,358,0,1663475049),(598,402,358,0,1663475332),(599,402,343,1,1663475436),(600,400,359,0,1663475772),(601,407,359,0,1663477712),(602,408,360,0,1663491812),(603,408,359,0,1663491815),(604,400,360,0,1663492043),(605,400,361,0,1663492044),(606,400,362,0,1663497188),(607,407,361,0,1663502883),(608,403,355,0,1663506209),(609,403,342,0,1663506228),(610,403,341,0,1663506257),(611,403,362,0,1663506265),(612,402,360,0,1663507672),(613,404,363,0,1663513218),(614,404,362,0,1663513349),(615,400,363,0,1663513355),(616,400,364,0,1663550889);
+/*!40000 ALTER TABLE `support` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `topic`
+--
+
+DROP TABLE IF EXISTS `topic`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `topic` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(80) NOT NULL,
+  `titlepic` varchar(255) NOT NULL,
+  `desc` varchar(255) NOT NULL,
+  `type` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '0 禁用 1启用',
+  `create_time` datetime DEFAULT NULL,
+  `topic_class_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `topic`
+--
+
+LOCK TABLES `topic` WRITE;
+/*!40000 ALTER TABLE `topic` DISABLE KEYS */;
+INSERT INTO `topic` VALUES (1,'默认','https://s1.328888.xyz/2022/09/18/oxlCo.png','默认话题',1,NULL,1);
+/*!40000 ALTER TABLE `topic` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `topic_class`
+--
+
+DROP TABLE IF EXISTS `topic_class`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `topic_class` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `classname` varchar(5) NOT NULL,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '0 禁用 1启用',
+  `create_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `topic_class`
+--
+
+LOCK TABLES `topic_class` WRITE;
+/*!40000 ALTER TABLE `topic_class` DISABLE KEYS */;
+INSERT INTO `topic_class` VALUES (1,'默认',1,NULL);
+/*!40000 ALTER TABLE `topic_class` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `topic_post`
+--
+
+DROP TABLE IF EXISTS `topic_post`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `topic_post` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `topic_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '话题id',
+  `post_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '帖子id',
+  `create_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=298 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `topic_post`
+--
+
+LOCK TABLES `topic_post` WRITE;
+/*!40000 ALTER TABLE `topic_post` DISABLE KEYS */;
+INSERT INTO `topic_post` VALUES (278,1,345,1663432178),(279,1,346,1663432840),(280,1,347,1663433005),(281,1,348,1663433144),(282,1,349,1663433343),(283,1,350,1663433472),(284,1,351,1663433503),(285,1,352,1663433958),(286,1,353,1663434106),(287,1,354,1663434471),(288,1,355,1663464361),(289,1,356,1663469745),(290,1,357,1663470419),(291,1,358,1663471781),(292,1,359,1663475535),(293,1,360,1663491043),(294,1,361,1663491987),(295,1,362,1663496969),(296,1,363,1663513162),(297,1,364,1663549169);
+/*!40000 ALTER TABLE `topic_post` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `update`
+--
+
+DROP TABLE IF EXISTS `update`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `update` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `url` varchar(255) DEFAULT NULL,
+  `version` varchar(10) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT '0' COMMENT '0未上线 1上线',
+  `create_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `update`
+--
+
+LOCK TABLES `update` WRITE;
+/*!40000 ALTER TABLE `update` DISABLE KEYS */;
+INSERT INTO `update` VALUES (1,'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f48d38ce-3ada-4eb6-b207-5471a565c5de/299a968f-13ef-48e9-a5e5-bf2b2146f91e.apk','2.3',1,NULL);
+/*!40000 ALTER TABLE `update` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user`
+--
+
+DROP TABLE IF EXISTS `user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(80) NOT NULL,
+  `userpic` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `phone` varchar(11) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '0 禁用 1启用',
+  `create_time` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=409 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user`
+--
+
+LOCK TABLES `user` WRITE;
+/*!40000 ALTER TABLE `user` DISABLE KEYS */;
+INSERT INTO `user` VALUES (400,'管理员','https://cloud.ourcolu.com/uploads/20220918/8074fa041ea0a3d6a39cec0412606ee9.png','$2y$10$9xfGQIJu9QDPFyqo9Yyn4OMJMyEBHLtRXdjnf7Wnxs/N61zEIDg.W',NULL,'elem@duck.com',1,1663409091),(401,'114514',NULL,'$2y$10$uNzasIXZ3r94sRTTp1A1d./4upJZ1QeTGSszzeDO64yeUdeRWgCl2',NULL,NULL,1,1663410479),(402,'机不可失','https://cloud.ourcolu.com/uploads/20220918/f71c3b023b99b126517906fe056901cf.jpg','$2y$10$4h0CVtr/vMpaMoSS80b5O.zWsPHamn2ROQ0hOTJdjkM5xha0XiKqq',NULL,'3290712646@qq.com',1,1663411464),(403,'yuanziyu','https://cloud.ourcolu.com/uploads/20220918/a091f52bd76adaf76aca199ede9867af.jpg','$2y$10$Zln.dthpur8xyT5wRj5F/.X7R3mVFBAwF1DI3t0//x3SvxVNiW6Ji',NULL,NULL,1,1663411511),(404,'氚-Tritium','https://cloud.ourcolu.com/uploads/20220918/d46876a635ef63ed1779cb16fc1b19d1.jpg','$2y$10$lrK/1rZMDElj8SCPpYZkSevQb5OZDI9yNU2JQVuJqulo7dasqEYZC',NULL,NULL,1,1663412056),(405,'Makou','https://cloud.ourcolu.com/uploads/20220918/5df3687bef88ffd3f39fc60558d5b4c5.png','$2y$10$PnpteQZaWfv8YcqWcGMzVurCGiaeCKyAgNFIDZflmIltsU353iDGS',NULL,NULL,1,1663420979),(406,'beifu',NULL,'$2y$10$F5Xl0Sq8m9DeWBbOBE7rC.LNl624sIhinj54H/awpsrX4la9C.A/q',NULL,'114514@qq.com',1,1663464228),(407,'蜗牛小站','https://cloud.ourcolu.com/uploads/20220918/3a41e43ef648ba04c8eac88ec4c1d857.jpg','$2y$10$jkBLE.K5CkchLEYOdt9U3u2P5mnZ6gcSpmvhW.iz7w4yZZT5.q/Am',NULL,NULL,1,1663477659),(408,'测试专用',NULL,'$2y$10$xypXCOliw7SCDhArBEREHOyPEbKVC/0gCHygTx4N8RbV80EQ.aNAS',NULL,NULL,1,1663490933);
+/*!40000 ALTER TABLE `user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user_bind`
+--
+
+DROP TABLE IF EXISTS `user_bind`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user_bind` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `type` varchar(50) NOT NULL,
+  `openid` varchar(255) NOT NULL,
+  `user_id` int(10) unsigned DEFAULT '0',
+  `nickname` varchar(50) DEFAULT NULL,
+  `avatarurl` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=293 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user_bind`
+--
+
+LOCK TABLES `user_bind` WRITE;
+/*!40000 ALTER TABLE `user_bind` DISABLE KEYS */;
+INSERT INTO `user_bind` VALUES (291,'weixin','oRrdQtxP8ro6ciiyH_7U4q6Va_LU',400,'九平米','https://thirdwx.qlogo.cn/mmopen/vi_32/dAkTIgz3sFpuibtzogdzvKZHQs8JZpG7mibVSboMq847JGJP7UlRs7nw7UbpuTRZoeqh7IZPQ6LO8u6LkFGrMvWg/132'),(292,'qq','76008AB4C297E5FB471071DC6712A860',400,'九平米','http://qzapp.qlogo.cn/qzapp/1104455702/76008AB4C297E5FB471071DC6712A860/30');
+/*!40000 ALTER TABLE `user_bind` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `userinfo`
+--
+
+DROP TABLE IF EXISTS `userinfo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `userinfo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '用户id',
+  `age` int(3) unsigned NOT NULL DEFAULT '0' COMMENT '年龄',
+  `sex` tinyint(1) unsigned NOT NULL DEFAULT '2' COMMENT '0 男 1女 2不限',
+  `qg` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0不限',
+  `job` varchar(10) DEFAULT NULL,
+  `path` varchar(255) DEFAULT NULL,
+  `birthday` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=399 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `userinfo`
+--
+
+LOCK TABLES `userinfo` WRITE;
+/*!40000 ALTER TABLE `userinfo` DISABLE KEYS */;
+INSERT INTO `userinfo` VALUES (390,400,0,1,1,'IT','上海市-市辖区-杨浦区','2022-09-17'),(391,401,0,2,0,NULL,NULL,NULL),(392,402,0,2,0,NULL,NULL,NULL),(393,403,0,1,1,'IT','广东省-汕头市-金平区','2009-02-26'),(394,404,0,1,0,'IT','江西省-赣州市-宁都县','2003-03-06'),(395,405,0,2,0,'IT','北京市-市辖区-东城区','2022-09-17'),(396,406,0,2,0,NULL,NULL,NULL),(397,407,0,2,0,'IT','北京市-市辖区-东城区','2022-09-18'),(398,408,0,2,0,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `userinfo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping events for database 'cloud'
+--
+
+--
+-- Dumping routines for database 'cloud'
+--
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-09-19 15:00:01
