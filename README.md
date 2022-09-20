@@ -9,8 +9,7 @@ https://ext.dcloud.net.cn/plugin?id=9532
 **后端教程:**
 1. 宝塔面板先添加站点
 2. 创建数据库，导入给的数据库  
-https://fudan.lanzoub.com/iF2Zc0bzea4f
- 密码:hma3
+https://fudan.lanzoub.com/ieint0c16v5g
 3. 上传源码  
 https://fudan.lanzoub.com/i5xCb0bzeb3a
  密码:c7bt
@@ -21,7 +20,7 @@ https://fudan.lanzoub.com/i5xCb0bzeb3a
 8. 在SSH窗口输入：cd /www/wwwroot/你的网站名
 9. 在SSH窗口输入：php think worker:gateway (这步是开启websocket)，成功时显示如下：
  ![2022-09-20_18-31-15.png](https://img1.imgtp.com/2022/09/20/7y4LawIJ.png)
-11. 在/www/wwwroot/你的网址/application/common/controller/FileController的网址改成你自己的
-12. 测试 https://你的网址/api/v1/post/1 如显示 {"msg":"获取成功","data":{"detail":null}} 即为后台配置成功
+10. 在/www/wwwroot/你的网址/application/common/controller/FileController的网址改成你自己的
+11. 测试 https://你的网址/api/v1/post/1 如显示 {"msg":"获取成功","data":{"detail":null}} 即为后台配置成功
 ![2022-09-20_18-40-09.png](https://img1.imgtp.com/2022/09/20/U0Kb2aXm.png)
-14. 这样你就可以搭建你的论坛了！
+12. 这样你就可以搭建你的论坛了！
