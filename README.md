@@ -19,6 +19,8 @@ https://fudan.lanzoub.com/i5xCb0bzeb3a
 6. 在/public/config/gate_worker.php下查看接口，在防火墙放行这个端口
 7. 在SSH窗口输入：php-v (这步检查，建议使用的PHP版本不超过7.2)
 8. 在SSH窗口输入：cd /www/wwwroot/你的网站名
-9. 在SSH窗口输入：php think worker:gateway (这步是开启websocket)
-10. 在/www/wwwroot/你的网址/application/common/controller/FileController的网址改成你自己的
-11. 测试 https://你的网址/api/v1/post/ 如显示 {"msg":"获取成功","data":{"detail":null}} 即为后台配置成功
+9. 在SSH窗口输入：php think worker:gateway (这步是开启websocket)，成功时显示如下：
+ ![2022-09-20_18-31-15.png](https://img1.imgtp.com/2022/09/20/7y4LawIJ.png)
+11. 在/www/wwwroot/你的网址/application/common/controller/FileController的网址改成你自己的
+12. 测试 https://你的网址/api/v1/post/ 如显示 {"msg":"获取成功","data":{"detail":null}} 即为后台配置成功
+13. 这样你就可以搭建你的论坛了！
