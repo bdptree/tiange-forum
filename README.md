@@ -14,7 +14,7 @@ https://ext.dcloud.net.cn/plugin?id=9532
 2. 创建数据库，导入给的数据库  
 https://fudan.lanzoub.com/iF2Zc0bzea4f
 3. 上传后台源码  
-https://fudan.lanzoub.com/ieint0c16v5g
+https://fudan.lanzoub.com/ihh2z0c17ykf
 4. 在/public/config/database.php下配置数据库
 5. 设置伪静态为thinkphp,运行目录为/public
 6. 在/public/config/gate_worker.php下查看接口，在防火墙放行这个端口
