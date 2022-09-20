@@ -1,4 +1,7 @@
 # 天鸽社区论坛类开发模板搭建指南
+**项目预览:**
+https://img-cdn-aliyun.dcloud.net.cn/stream/plugin_screens/131fcc10-37cf-11ed-8be2-0593d4a5e7c4_1.png?image_process=quality,q_70/format,webp&v=1663560104
+
 **项目结构:**
 前端：uniapp+vue2
 后端：php
@@ -9,10 +12,9 @@ https://ext.dcloud.net.cn/plugin?id=9532
 **后端教程:**
 1. 宝塔面板先添加站点
 2. 创建数据库，导入给的数据库  
+https://fudan.lanzoub.com/iF2Zc0bzea4f
+3. 上传后台源码  
 https://fudan.lanzoub.com/ieint0c16v5g
-3. 上传源码  
-https://fudan.lanzoub.com/i5xCb0bzeb3a
- 密码:c7bt
 4. 在/public/config/database.php下配置数据库
 5. 设置伪静态为thinkphp,运行目录为/public
 6. 在/public/config/gate_worker.php下查看接口，在防火墙放行这个端口
