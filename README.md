@@ -26,3 +26,6 @@ https://fudan.lanzoub.com/ihh2z0c17ykf
 11. 测试 https://你的网址/api/v1/post/1 如显示 {"msg":"获取成功","data":{"detail":null}} 即为后台配置成功
 ![2022-09-20_18-40-09.png](https://img1.imgtp.com/2022/09/20/U0Kb2aXm.png)
 12. 这样你就可以搭建你的论坛了！
+
+**License:**
+MIT开源协议
