@@ -1,12 +1,12 @@
 # 天鸽社区论坛类开发模板搭建指南
-**项目预览:**
-![2022-09-20_18-31-15.png](https://img-cdn-aliyun.dcloud.net.cn/stream/plugin_screens/131fcc10-37cf-11ed-8be2-0593d4a5e7c4_1.png)
+**项目名称:**
+天鸽社区论坛类开发模板
 
 **项目结构:**
 前端：uniapp+vue2
 后端：php
 
-**前端源码:**
+**项目预览及前端源码:**
 https://ext.dcloud.net.cn/plugin?id=9532
 
 **后端教程:**
