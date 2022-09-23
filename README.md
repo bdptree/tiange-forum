@@ -33,6 +33,7 @@ https://ext.dcloud.net.cn/plugin?id=9532
 2. 创建数据库，导入给的数据库  
 https://fudan.lanzoub.com/iorbM0c16zqb
 3. 上传后台源码  
+2.41版本：https://fudan.lanzoub.com/iaMRo0c8m3gh  
 2.4版本：https://fudan.lanzoub.com/iaMRo0c8m3gh  
 2.3版本：https://fudan.lanzoub.com/iYgbW0c8mchc
 4. 在/public/config/database.php下配置数据库
